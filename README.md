@@ -25,3 +25,20 @@ post/"Id"はpost"index"より下に書かないといけない。
 コントトーラーでshowを作ってviweのhtml、、？
 コントローラーのアクション内ではルーティングで設定したurlの値を取得できる。
 params[:id]で取得できる。           
+
+## 2/13
+link.to( URLのタイトル、URL
+ルーティング→コントローラー→ビュー
+
+送信されたデータを受け取るルーティング
+post "post/create" => "post#create"
+
+受け取ったでーたをurlに送信するform_tagメソッド
+<%=　form_tag(送信するURL）　do %>
+(controller)
+redirect_to(url)で自動的に指定したURLに転送される
+@paramsはname="○○”の値を受け取れる
+またurlの:○○も受け取れる
+order (カラム名：並び替えの秩序）
+降順→desc 昇順→asc
+order(created_at: :asc
