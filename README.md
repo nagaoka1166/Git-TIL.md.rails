@@ -42,3 +42,14 @@ redirect_to(url)で自動的に指定したURLに転送される
 order (カラム名：並び替えの秩序）
 降順→desc 昇順→asc
 order(created_at: :asc
+
+## 2/17
+lフォームで入力した値をアップデートするにはフォームの値をupdateアクションに送信しないといけない
+form_tag(送信先URL）
+updateアクションで入力した値を@params:idで取得してpost.contentに代入する
+データベースを変更するアクションがpost
+データーベースを変更しないアクションがget
+destroyアクションのルーティングはpost
+postの奴はpostようのリンクを作らなければならない。
+<% link_to(名前、url) {method:post}%>
+削除機能を作るには
